@@ -1,198 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-        body,
-        html,
-        #allmap {
-            width: 100%;
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>默认点标记</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+        html, body, #container {
             height: 100%;
-            overflow: hidden;
-            margin: 0;
-            font-family: "微软雅黑";
+            width: 100%;
+        }
+
+        .amap-icon img,
+        .amap-marker-content img{
+            width: 25px;
+            height: 34px;
+        }
+
+        .marker {
+            position: absolute;
+            top: -20px;
+            right: -118px;
+            color: #fff;
+            padding: 4px 10px;
+            box-shadow: 1px 1px 1px rgba(10, 10, 10, .2);
+            white-space: nowrap;
+            font-size: 12px;
+            font-family: "";
+            background-color: #25A5F7;
+            border-radius: 3px;
+        }
+
+        .input-card{
+            width: 18rem;
+            z-index: 170;
+        }
+
+        .input-card .btn{
+            margin-right: .8rem;
+        }
+
+        .input-card .btn:last-child{
+            margin-right: 0;
         }
     </style>
-    <script type="text/javascript" //ak填自己申请的ak src="http://api.map.baidu.com/api?v=2.0& ak=F8dt3efLmdQdrVU09t8Iy0SxrsBrPFr9">
-    </script>
-    <title>百度地图api展示</title>
 </head>
-
 <body>
-    <input type="file" onchange="impexcel(this)" />
-    <div id="allmap"></div>
-</body>
-
-</html>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-
-<script src="https://cdn.bootcss.com/xlsx/0.12.6/xlsx.full.min.js"></script>
+<div id="container"></div>
+<div class="input-card">
+    <label style="color:grey">点标记操作</label>
+    <div class="input-item">
+        <input id="addMarker" type="button" class="btn" onclick="addMarker()" value="添加点标记">
+        <input id="updateMarker" type="button" class="btn" onclick="updateIcon()" value="更新点标记图标">
+    </div>
+    <div class="input-item">
+        <input id="clearMarker" type="button" class="btn" onclick="clearMarker()" value="删除点标记">
+        <input id="updateMarker" type="button" class="btn" onclick="updateContent()" value="更新点标记内容">
+    </div>
+</div>
+<script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=您申请的key值"></script>
 <script type="text/javascript">
-    var wb; // 读取完成的数据
+    var marker, map = new AMap.Map("container", {
+        resizeEnable: true,
+        center: [116.397428, 39.90923],
+        zoom: 13
+    });
 
-    // 导入
-
-    function impexcel(obj) {
-
-        if (!obj.files) {
-
-            return;
-
-        }
-
-        var f = obj.files[0];
-
-        //新建文件读取
-
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-
-            var data = e.target.result;
-
-            //将文件读取为二进制字符串
-
-            wb = XLSX.read(data, {
-                type: 'binary'
-            });
-
-            JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[j]]));
-            for (var j = 0; j < 11; j++) {
-                for (var i = 2; i <= wb.Sheets[wb.SheetNames[j]]["!ref"].slice(4); i++) {
-                    // <!--	console.log(wb.Sheets[wb.SheetNames[j]]["I"+i]["w"]);-->
-                    // <!--	console.log(wb.Sheets[wb.SheetNames[j]]["F"+i]["w"]);-->
-                    if (wb.Sheets[wb.SheetNames[j]]["I" + i] != undefined) {
-                        var x = wb.Sheets[wb.SheetNames[j]]["I" + i]["w"].split(',')[0];
-                        var y = wb.Sheets[wb.SheetNames[j]]["I" + i]["w"].split(',')[1]
-                        var id = wb.Sheets[wb.SheetNames[j]]["A" + i]["w"] + wb.Sheets[wb.SheetNames[j]]["J" + i]["w"]
-                        var name = wb.Sheets[wb.SheetNames[j]]["G" + i]["w"]
-                        var url = wb.Sheets[wb.SheetNames[j]]["H" + i]["w"]
-                        var zhejialv = wb.Sheets[wb.SheetNames[j]]["F" + i]["w"]
-                        var qipaijia = wb.Sheets[wb.SheetNames[j]]["K" + i]["w"]
-                        console.log(i)
-                        console.log(x)
-                        console.log(y)
-                        console.log(id)
-                        console.log(name)
-                        console.log(url)
-
-                        // function showInfo(thisMarker, point) {
-                        //     //获取点的信息
-                        //     var sContent =
-                        //         '<ul style="margin:0 0 5px 0;padding:0.2em 0">' +
-                        //         '<li style="line-height: 26px;font-size: 15px;">' +
-                        //         '<span style="width: 50px;display: inline-block;">id：</span>' + id + '</li>' +
-                        //         '<li style="line-height: 26px;font-size: 15px;">' +
-                        //         '<span style="width: 50px;display: inline-block;">名称：</span>' + name + '</li>' +
-                        //         '<li style="line-height: 26px;font-size: 15px;"><span style="width: 50px;display: inline-block;">查看：</span><a href="' + url + '">详情</a></li>' +
-                        //         '</ul>';
-                        //     var infoWindow = new BMap.InfoWindow(sContent); //创建信息窗口对象
-                        //     thisMarker.openInfoWindow(infoWindow); //图片加载完后重绘infoWindow
-                        // }
-
-
-
-
-
-
-                        var marker1 = new BMap.Marker(new BMap.Point(x, y));
-                        console.log(marker1)
-                        map.addOverlay(marker1);
-                        var label = new BMap.Label(id + ':' + zhejialv + ':' + qipaijia, {
-                            offset: new BMap.Size(20, -10)
-                        });
-                        marker1.setLabel(label);
-
-                        //添加监听事件
-                        // (function() {
-                        //     var thePoint = points[i];
-                        //     marker1.addEventListener("click",
-                        //         function() {
-                        //             showInfo(this, thePoint);
-                        //         });
-                        // })();
-                    }
-
-                }
-            }
-
-
-
-        }
-        reader.readAsBinaryString(f);
+    // 实例化点标记
+    function addMarker() {
+        marker = new AMap.Marker({
+            icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
+            position: [116.406315,39.908775],
+            offset: new AMap.Pixel(-13, -30)
+        });
+        marker.setMap(map);
+    }
+    function updateIcon() {
+    
+        marker.setIcon('//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png')
     }
 
+    function updateContent() {
 
+        if (!marker) {
+            return;
+        }
 
-    // var map = new BMap.Map("allmap");
-    // map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 设置中心点
-    // map.centerAndZoom("衡阳");
-    // map.setCurrentCity("衡阳"); //设置为衡阳
-    // map.addControl(new BMap.MapTypeControl());
-    // map.enableScrollWheelZoom(true);
-    // addMarker(points);
+        // 自定义点标记内容
+        var markerContent = document.createElement("div");
 
+        // 点标记中的图标
+        var markerImg = document.createElement("img");
+        markerImg.className = "markerlnglat";
+        markerImg.src = "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png";
+        markerContent.appendChild(markerImg);
 
+        // 点标记中的文本
+        var markerSpan = document.createElement("span");
+        markerSpan.className = 'marker';
+        markerSpan.innerHTML = "Hi，我被更新啦！";
+        markerContent.appendChild(markerSpan);
 
-    //新建三个地图上点
-    // var points = [{
-    //     "lng": 112.58,
-    //     "lat": 26.89,
-    //     "url": "http://www.baidu.com",
-    //     "id": 1,
-    //     "name": "p1"
-    // }, {
-    //     "lng": 112.59,
-    //     "lat": 26.90,
-    //     "url": "http://www.mi.com",
-    //     "id": 2,
-    //     "name": "p2"
-    // }, {
-    //     "lng": 112.57,
-    //     "lat": 26.88,
-    //     "url": "http://www.csdn.com",
-    //     "id": 3,
-    //     "name": "p3"
-    // }];
-    //创建标注点并添加到地图中
-    // function addMarker(points) {
-    //     //循环建立标注点
-    //     for (var i = 0, pointsLen = points.length; i < pointsLen; i++) {
-    //         var point = new BMap.Point(points[i].lng, points[i].lat); //将标注点转化成地图上的点
-    //         var marker = new BMap.Marker(point); //将点转化成标注点
-    //         map.addOverlay(marker); //将标注点添加到地图上
-    //         //添加监听事件
-    //         (function() {
-    //             var thePoint = points[i];
-    //             marker.addEventListener("click",
-    //                 function() {
-    //                     showInfo(this, thePoint);
-    //                 });
-    //         })();
-    //     }
-    // }
+        marker.setContent(markerContent); //更新点标记内容
+        marker.setPosition([116.391467, 39.927761]); //更新点标记位置
+    }
 
-    // function showInfo(thisMarker, point) {
-    //     //获取点的信息
-    //     var sContent =
-    //         '<ul style="margin:0 0 5px 0;padding:0.2em 0">' +
-    //         '<li style="line-height: 26px;font-size: 15px;">' +
-    //         '<span style="width: 50px;display: inline-block;">id：</span>' + point.id + '</li>' +
-    //         '<li style="line-height: 26px;font-size: 15px;">' +
-    //         '<span style="width: 50px;display: inline-block;">名称：</span>' + point.name + '</li>' +
-    //         '<li style="line-height: 26px;font-size: 15px;"><span style="width: 50px;display: inline-block;">查看：</span><a href="' + point.url + '">详情</a></li>' +
-    //         '</ul>';
-    //     var infoWindow = new BMap.InfoWindow(sContent); //创建信息窗口对象
-    //     thisMarker.openInfoWindow(infoWindow); //图片加载完后重绘infoWindow
-    // }
-    //创建地图
-    var map = new BMap.Map("allmap");
-    map.centerAndZoom(new BMap.Point(113.27, 23.13), 11); // 设置中心点
-    map.centerAndZoom("广州");
-    map.setCurrentCity("广州"); //设置为衡阳
-    map.addControl(new BMap.MapTypeControl());
-    map.enableScrollWheelZoom(true);
-    addMarker(points);
+    // 清除 marker
+    function clearMarker() {
+
+        if (marker) {
+            marker.setMap(null);
+            marker = null;
+        }
+    }
 </script>
+</body>
+</html>
