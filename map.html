@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9b51fe5445be467eaae446e3ed4bdb7b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9b51fe5445be467eaae446e3ed4bdb7b" ></div>
+        
+</body>
+<script>    
+    
+            var map_9b51fe5445be467eaae446e3ed4bdb7b = L.map(
+                "map_9b51fe5445be467eaae446e3ed4bdb7b",
+                {
+                    center: [23.120049, 113.30765],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ae3135fb72ff483dbe47946001e122b8 = L.tileLayer(
+                "http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn\u0026size=1\u0026scale=1\u0026style=7\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "default", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var marker_2649dd60787c4e29aa1238ad7cea75f7 = L.marker(
+                [23.12766318243499, 113.37415330654306],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_15192d63ddf84e1bb554794ee88d4a2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2649dd60787c4e29aa1238ad7cea75f7.setIcon(icon_15192d63ddf84e1bb554794ee88d4a2b);
+        
+    
+        var popup_dc6f0fb83474445b97328f6dacbb84f5 = L.popup({"maxWidth": 2650});
+
+        
+            var html_a142efbef1cb421e9fe047b96232c0b5 = $(`<div id="html_a142efbef1cb421e9fe047b96232c0b5" style="width: 100.0%; height: 100.0%;"><b>勤天E品</b><br><b>建筑面积：80.29</b><br><b>市场价：363万</b><br><b>现售价：262万</b><br><b>首付：188万</b><br><b>地址：广州市天河区中山大道西238号</b></div>`)[0];
+            popup_dc6f0fb83474445b97328f6dacbb84f5.setContent(html_a142efbef1cb421e9fe047b96232c0b5);
+        
+
+        marker_2649dd60787c4e29aa1238ad7cea75f7.bindPopup(popup_dc6f0fb83474445b97328f6dacbb84f5)
+        ;
+
+        
+    
+    
+            var marker_c13992bddc5341dfa731d0227ed8452f = L.marker(
+                [23.232197989474948, 113.29415844618441],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_dcdc6db7b0294236803fb5467e9fecd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c13992bddc5341dfa731d0227ed8452f.setIcon(icon_dcdc6db7b0294236803fb5467e9fecd1);
+        
+    
+        var popup_2d4dea9ab27840efb8af07edaa3a5dfe = L.popup({"maxWidth": 2650});
+
+        
+            var html_b7e43d169d4748f4b8b935758ca8b068 = $(`<div id="html_b7e43d169d4748f4b8b935758ca8b068" style="width: 100.0%; height: 100.0%;"><b>岭南新世界</b><br><b>建筑面积：86.44</b><br><b>市场价：393万</b><br><b>现售价：283万</b><br><b>首付：169万</b><br><b>地址：广州市白云区集慧街42号</b></div>`)[0];
+            popup_2d4dea9ab27840efb8af07edaa3a5dfe.setContent(html_b7e43d169d4748f4b8b935758ca8b068);
+        
+
+        marker_c13992bddc5341dfa731d0227ed8452f.bindPopup(popup_2d4dea9ab27840efb8af07edaa3a5dfe)
+        ;
+
+        
+    
+    
+            var marker_1f939b8d512e4a84b44542b640aaf43e = L.marker(
+                [23.15225780513008, 113.2588806054813],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_33a2a58f6c46432394a11e7778245511 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1f939b8d512e4a84b44542b640aaf43e.setIcon(icon_33a2a58f6c46432394a11e7778245511);
+        
+    
+        var popup_c48ee686fb9a44c2aefb71acdb3590e6 = L.popup({"maxWidth": 2650});
+
+        
+            var html_903880c8603a426ba60554c78fd2590c = $(`<div id="html_903880c8603a426ba60554c78fd2590c" style="width: 100.0%; height: 100.0%;"><b>隆泰逸品君庭</b><br><b>建筑面积：141.10</b><br><b>市场价：660万</b><br><b>现售价：475万</b><br><b>首付：210万</b><br><b>地址：广州市白云区隆泰街14号</b></div>`)[0];
+            popup_c48ee686fb9a44c2aefb71acdb3590e6.setContent(html_903880c8603a426ba60554c78fd2590c);
+        
+
+        marker_1f939b8d512e4a84b44542b640aaf43e.bindPopup(popup_c48ee686fb9a44c2aefb71acdb3590e6)
+        ;
+
+        
+    
+    
+            var marker_cecc2e8533054b9b920688ef7f3d74b2 = L.marker(
+                [23.184232397505024, 113.24316912523238],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_814ffd45ddd54e93a810deca4478fee7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cecc2e8533054b9b920688ef7f3d74b2.setIcon(icon_814ffd45ddd54e93a810deca4478fee7);
+        
+    
+        var popup_6326bc8474f94563af2751e9695ae35c = L.popup({"maxWidth": 2650});
+
+        
+            var html_448b813c810c40a9905f365f3f8d1fd8 = $(`<div id="html_448b813c810c40a9905f365f3f8d1fd8" style="width: 100.0%; height: 100.0%;"><b>丽康居教师新村</b><br><b>建筑面积：94,69</b><br><b>市场价：232万</b><br><b>现售价：165万</b><br><b>首付：92万</b><br><b>地址：广州市白云区丽康街5号</b></div>`)[0];
+            popup_6326bc8474f94563af2751e9695ae35c.setContent(html_448b813c810c40a9905f365f3f8d1fd8);
+        
+
+        marker_cecc2e8533054b9b920688ef7f3d74b2.bindPopup(popup_6326bc8474f94563af2751e9695ae35c)
+        ;
+
+        
+    
+    
+            var marker_e3d094ebe1ca481989989b9a2d725d7b = L.marker(
+                [23.20902962906737, 113.32013980870757],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_3c289755a8bd40cdb6c1311d110c1df5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e3d094ebe1ca481989989b9a2d725d7b.setIcon(icon_3c289755a8bd40cdb6c1311d110c1df5);
+        
+    
+        var popup_dbcbdac5ec89403184b637358b622c87 = L.popup({"maxWidth": 2650});
+
+        
+            var html_aa1662c97a6d4f69803ca1c9599de16c = $(`<div id="html_aa1662c97a6d4f69803ca1c9599de16c" style="width: 100.0%; height: 100.0%;"><b>自云山制药厂后山</b><br><b>建筑面积：81.67</b><br><b>市场价：199万</b><br><b>现售价：140万</b><br><b>首付：47万</b><br><b>地址：广州市白云区同泰路1051号</b></div>`)[0];
+            popup_dbcbdac5ec89403184b637358b622c87.setContent(html_aa1662c97a6d4f69803ca1c9599de16c);
+        
+
+        marker_e3d094ebe1ca481989989b9a2d725d7b.bindPopup(popup_dbcbdac5ec89403184b637358b622c87)
+        ;
+
+        
+    
+    
+            var marker_c3a5a4b596de41358ad1d03e5a6d7e22 = L.marker(
+                [23.12991838704535, 113.25437924259062],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_9c52de3f5a9847e5b7554145a8045ebb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c3a5a4b596de41358ad1d03e5a6d7e22.setIcon(icon_9c52de3f5a9847e5b7554145a8045ebb);
+        
+    
+        var popup_28ab2ffa580e415a9c31b44c68d6aad7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_fb83601436b64457a422f08181ee15c9 = $(`<div id="html_fb83601436b64457a422f08181ee15c9" style="width: 100.0%; height: 100.0%;"><b>越富广场</b><br><b>建筑面积：102.37</b><br><b>市场价：403万</b><br><b>现售价：282万</b><br><b>首付：260万</b><br><b>地址：广州市越秀区人民北路839号</b></div>`)[0];
+            popup_28ab2ffa580e415a9c31b44c68d6aad7.setContent(html_fb83601436b64457a422f08181ee15c9);
+        
+
+        marker_c3a5a4b596de41358ad1d03e5a6d7e22.bindPopup(popup_28ab2ffa580e415a9c31b44c68d6aad7)
+        ;
+
+        
+    
+    
+            var marker_e1aa6bef706a419ba2cd2371209d9f83 = L.marker(
+                [23.133348132339325, 113.2691616124226],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_2e024a429a9c47a09f6acbe9e5ce1987 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e1aa6bef706a419ba2cd2371209d9f83.setIcon(icon_2e024a429a9c47a09f6acbe9e5ce1987);
+        
+    
+        var popup_125a2d3e84ff447294ca9e81cd6f3ed0 = L.popup({"maxWidth": 2650});
+
+        
+            var html_0db2f31b5e2d4b22bc9461ce8ceb47b2 = $(`<div id="html_0db2f31b5e2d4b22bc9461ce8ceb47b2" style="width: 100.0%; height: 100.0%;"><b>大石街40号小区</b><br><b>建筑面积：83.63</b><br><b>市场价：420万</b><br><b>现售价：295万</b><br><b>首付：248万</b><br><b>地址：广州市越秀区小北路大石街40号</b></div>`)[0];
+            popup_125a2d3e84ff447294ca9e81cd6f3ed0.setContent(html_0db2f31b5e2d4b22bc9461ce8ceb47b2);
+        
+
+        marker_e1aa6bef706a419ba2cd2371209d9f83.bindPopup(popup_125a2d3e84ff447294ca9e81cd6f3ed0)
+        ;
+
+        
+    
+    
+            var marker_67ec037671224a17a6afd6187008aaad = L.marker(
+                [23.026137524285513, 113.32437487828753],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_4f57c2fb94344e308ebd4b0c78938f70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_67ec037671224a17a6afd6187008aaad.setIcon(icon_4f57c2fb94344e308ebd4b0c78938f70);
+        
+    
+        var popup_32bc77fb3ce045eda24c55f53144b07f = L.popup({"maxWidth": 2650});
+
+        
+            var html_562c24b47b2e44a89611da745016edda = $(`<div id="html_562c24b47b2e44a89611da745016edda" style="width: 100.0%; height: 100.0%;"><b>滨江绿园</b><br><b>建筑面积：57.53</b><br><b>市场价：174万</b><br><b>现售价：122万</b><br><b>首付：47万</b><br><b>地址：广州市番禺区大石街滨江绿园绿雅居1座</b></div>`)[0];
+            popup_32bc77fb3ce045eda24c55f53144b07f.setContent(html_562c24b47b2e44a89611da745016edda);
+        
+
+        marker_67ec037671224a17a6afd6187008aaad.bindPopup(popup_32bc77fb3ce045eda24c55f53144b07f)
+        ;
+
+        
+    
+    
+            var marker_d250ac2906044edfbb311487157112ee = L.marker(
+                [22.944609671320503, 113.36175857845737],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_f21770872f22438dba2b311170ab0357 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d250ac2906044edfbb311487157112ee.setIcon(icon_f21770872f22438dba2b311170ab0357);
+        
+    
+        var popup_8fc3e32fb6944ba4a74e3b431a74b1f7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_a900a89a44764d26802634dcbc226351 = $(`<div id="html_a900a89a44764d26802634dcbc226351" style="width: 100.0%; height: 100.0%;"><b>光明大厦</b><br><b>建筑面积：202.90</b><br><b>市场价：451万</b><br><b>现售价：316万</b><br><b>首付：75万</b><br><b>地址：广州市番禺区市桥街繁华路怡乐园一街5座</b></div>`)[0];
+            popup_8fc3e32fb6944ba4a74e3b431a74b1f7.setContent(html_a900a89a44764d26802634dcbc226351);
+        
+
+        marker_d250ac2906044edfbb311487157112ee.bindPopup(popup_8fc3e32fb6944ba4a74e3b431a74b1f7)
+        ;
+
+        
+    
+    
+            var marker_6c06f1d5e63d4d2e8f4314bde99ccbe0 = L.marker(
+                [22.989724079264324, 113.4946060066604],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_224774f979ec4c75a61c2b486249df80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6c06f1d5e63d4d2e8f4314bde99ccbe0.setIcon(icon_224774f979ec4c75a61c2b486249df80);
+        
+    
+        var popup_2fde69cb60404152a8646d939f1850dc = L.popup({"maxWidth": 2650});
+
+        
+            var html_eac3ecbde5244c0388feb0bdcfc57482 = $(`<div id="html_eac3ecbde5244c0388feb0bdcfc57482" style="width: 100.0%; height: 100.0%;"><b>石楼碧桂园</b><br><b>建筑面积：261.99</b><br><b>市场价：485万</b><br><b>现售价：339万</b><br><b>首付：82万</b><br><b>地址：广州市番禺区石楼镇石楼碧桂园瑞莲街6号</b></div>`)[0];
+            popup_2fde69cb60404152a8646d939f1850dc.setContent(html_eac3ecbde5244c0388feb0bdcfc57482);
+        
+
+        marker_6c06f1d5e63d4d2e8f4314bde99ccbe0.bindPopup(popup_2fde69cb60404152a8646d939f1850dc)
+        ;
+
+        
+    
+    
+            var marker_22dc061b477e45178439dde35a13d761 = L.marker(
+                [22.922741341585667, 113.37034042047492],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_c41653a86bf14c64ba2b740cb5da67bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_22dc061b477e45178439dde35a13d761.setIcon(icon_c41653a86bf14c64ba2b740cb5da67bb);
+        
+    
+        var popup_ad44c394ccbb4b7bb856c13e99e41f1a = L.popup({"maxWidth": 2650});
+
+        
+            var html_d1914b773c774361ae344deef0f46749 = $(`<div id="html_d1914b773c774361ae344deef0f46749" style="width: 100.0%; height: 100.0%;"><b>汇庭雅苑</b><br><b>建筑面积：87.04</b><br><b>市场价：190万</b><br><b>现售价：133万</b><br><b>首付：103万</b><br><b>地址：广州市番禺区桥南街汇景大道61号</b></div>`)[0];
+            popup_ad44c394ccbb4b7bb856c13e99e41f1a.setContent(html_d1914b773c774361ae344deef0f46749);
+        
+
+        marker_22dc061b477e45178439dde35a13d761.bindPopup(popup_ad44c394ccbb4b7bb856c13e99e41f1a)
+        ;
+
+        
+    
+    
+            var marker_5e18a84d743749508f6aa58d77ebeb26 = L.marker(
+                [22.967776291300083, 113.3343660213587],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_4295d6b035c74ca5a461ce36092ae716 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5e18a84d743749508f6aa58d77ebeb26.setIcon(icon_4295d6b035c74ca5a461ce36092ae716);
+        
+    
+        var popup_f9cde3a19ff64eed8a3d5edc58bf2175 = L.popup({"maxWidth": 2650});
+
+        
+            var html_cd088ccb8fe6459ab060feacbd100366 = $(`<div id="html_cd088ccb8fe6459ab060feacbd100366" style="width: 100.0%; height: 100.0%;"><b>祈福新村</b><br><b>建筑面积：103,40</b><br><b>市场价：277万</b><br><b>现售价：200万</b><br><b>首付：167万</b><br><b>地址：广州市番禺区钟村镇祈福新村康怡3街</b></div>`)[0];
+            popup_f9cde3a19ff64eed8a3d5edc58bf2175.setContent(html_cd088ccb8fe6459ab060feacbd100366);
+        
+
+        marker_5e18a84d743749508f6aa58d77ebeb26.bindPopup(popup_f9cde3a19ff64eed8a3d5edc58bf2175)
+        ;
+
+        
+    
+    
+            var marker_57a25a79b5ee45a29d487c4b653c5fbe = L.marker(
+                [23.03060802078649, 113.28745296778648],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_70f260b7956f42578a1d0fa97e4de82b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_57a25a79b5ee45a29d487c4b653c5fbe.setIcon(icon_70f260b7956f42578a1d0fa97e4de82b);
+        
+    
+        var popup_35f6f5f4e1bc41a78c7275970e4ebc73 = L.popup({"maxWidth": 2650});
+
+        
+            var html_3eecca8df7bf4c88bad5039480b5b4c0 = $(`<div id="html_3eecca8df7bf4c88bad5039480b5b4c0" style="width: 100.0%; height: 100.0%;"><b>碧桂园雅苑</b><br><b>建筑面积：96.80</b><br><b>市场价：280万</b><br><b>现售价：202万</b><br><b>首付：90万</b><br><b>地址：广州市番禺区洛浦街南浦岛碧桂园雅苑66座</b></div>`)[0];
+            popup_35f6f5f4e1bc41a78c7275970e4ebc73.setContent(html_3eecca8df7bf4c88bad5039480b5b4c0);
+        
+
+        marker_57a25a79b5ee45a29d487c4b653c5fbe.bindPopup(popup_35f6f5f4e1bc41a78c7275970e4ebc73)
+        ;
+
+        
+    
+    
+            var marker_a98cfd06f01b4eae8f9fda20d1e6fe9c = L.marker(
+                [22.95308366645647, 113.28653563161647],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_c7fd4a38a82b4c718c1aecfcc4825d81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a98cfd06f01b4eae8f9fda20d1e6fe9c.setIcon(icon_c7fd4a38a82b4c718c1aecfcc4825d81);
+        
+    
+        var popup_3c2f443682d54189add6ffe3d04b3762 = L.popup({"maxWidth": 2650});
+
+        
+            var html_9d841beb838947f0a1ae939a8d9f6977 = $(`<div id="html_9d841beb838947f0a1ae939a8d9f6977" style="width: 100.0%; height: 100.0%;"><b>碧桂园东苑</b><br><b>建筑面积：97.40</b><br><b>市场价：172万</b><br><b>现售价：120万</b><br><b>首付：100万</b><br><b>地址：广州市春禺区钟村镇碧桂园东苑蓬莱路3座</b></div>`)[0];
+            popup_3c2f443682d54189add6ffe3d04b3762.setContent(html_9d841beb838947f0a1ae939a8d9f6977);
+        
+
+        marker_a98cfd06f01b4eae8f9fda20d1e6fe9c.bindPopup(popup_3c2f443682d54189add6ffe3d04b3762)
+        ;
+
+        
+    
+    
+            var marker_e71c8d7fc81d4915bb441c4cb0d097c9 = L.marker(
+                [23.02498098698785, 113.38516379993139],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_bd18969ead4e471c9bfe3e5415140d90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e71c8d7fc81d4915bb441c4cb0d097c9.setIcon(icon_bd18969ead4e471c9bfe3e5415140d90);
+        
+    
+        var popup_34abd3e8216143e084c67db300e594e7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_c705d8e63673404a88b19279c85fa3de = $(`<div id="html_c705d8e63673404a88b19279c85fa3de" style="width: 100.0%; height: 100.0%;"><b>雅居乐剑桥郡</b><br><b>建筑面积：284.07</b><br><b>市场价：1050万</b><br><b>现售价：738万</b><br><b>首付：160万</b><br><b>地址：广州市番禺区南村镇瀚澜二街23号</b></div>`)[0];
+            popup_34abd3e8216143e084c67db300e594e7.setContent(html_c705d8e63673404a88b19279c85fa3de);
+        
+
+        marker_e71c8d7fc81d4915bb441c4cb0d097c9.bindPopup(popup_34abd3e8216143e084c67db300e594e7)
+        ;
+
+        
+    
+    
+            var marker_f52be4ece2664c59b8a47d52c8a1f28d = L.marker(
+                [23.375612057889242, 113.1641621838785],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_e6f48cb02dd24126bb48d45bcba657a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f52be4ece2664c59b8a47d52c8a1f28d.setIcon(icon_e6f48cb02dd24126bb48d45bcba657a9);
+        
+    
+        var popup_48febc82e2304fd4bbe7d417ac21f209 = L.popup({"maxWidth": 2650});
+
+        
+            var html_d1a16fbe4d134e11bc98548c85c81f05 = $(`<div id="html_d1a16fbe4d134e11bc98548c85c81f05" style="width: 100.0%; height: 100.0%;"><b>保利城</b><br><b>建筑面积：169.94</b><br><b>市场价：276万</b><br><b>现售价：202万</b><br><b>首付：98万</b><br><b>地址：广州市花都区新华街保利城一街7号</b></div>`)[0];
+            popup_48febc82e2304fd4bbe7d417ac21f209.setContent(html_d1a16fbe4d134e11bc98548c85c81f05);
+        
+
+        marker_f52be4ece2664c59b8a47d52c8a1f28d.bindPopup(popup_48febc82e2304fd4bbe7d417ac21f209)
+        ;
+
+        
+    
+    
+            var marker_1cd55b67af8b4cdbbef2a6562001d457 = L.marker(
+                [23.430309948536426, 113.18464287826252],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_bca4cb537acf48ca828bc0ab3ed92692 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1cd55b67af8b4cdbbef2a6562001d457.setIcon(icon_bca4cb537acf48ca828bc0ab3ed92692);
+        
+    
+        var popup_2f1cb8a77afa4b06b7e5c41b5022a644 = L.popup({"maxWidth": 2650});
+
+        
+            var html_66a4c1556f5949459aba7c3f897a2f7f = $(`<div id="html_66a4c1556f5949459aba7c3f897a2f7f" style="width: 100.0%; height: 100.0%;"><b>雅宝新城</b><br><b>建筑面积：96.50</b><br><b>市场价：143万</b><br><b>现售价：102万</b><br><b>首付：58万</b><br><b>地址：广州市花都区新华街花都大道中131号</b></div>`)[0];
+            popup_2f1cb8a77afa4b06b7e5c41b5022a644.setContent(html_66a4c1556f5949459aba7c3f897a2f7f);
+        
+
+        marker_1cd55b67af8b4cdbbef2a6562001d457.bindPopup(popup_2f1cb8a77afa4b06b7e5c41b5022a644)
+        ;
+
+        
+    
+    
+            var marker_d889c659e51d44478089109b29c19dec = L.marker(
+                [23.392957287408088, 113.23315023072465],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_8685454c572543c993a3aee6be74cd77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d889c659e51d44478089109b29c19dec.setIcon(icon_8685454c572543c993a3aee6be74cd77);
+        
+    
+        var popup_87fed384f14d4ffdae44de99fd2d8e2b = L.popup({"maxWidth": 2650});
+
+        
+            var html_c56e1b339632479ebeb50d065660fff6 = $(`<div id="html_c56e1b339632479ebeb50d065660fff6" style="width: 100.0%; height: 100.0%;"><b>岭南公馆</b><br><b>建筑面积：121.88</b><br><b>市场价：275万</b><br><b>现售价：190万</b><br><b>首付：180万</b><br><b>地址：广州市花都区凤凰北路25号</b></div>`)[0];
+            popup_87fed384f14d4ffdae44de99fd2d8e2b.setContent(html_c56e1b339632479ebeb50d065660fff6);
+        
+
+        marker_d889c659e51d44478089109b29c19dec.bindPopup(popup_87fed384f14d4ffdae44de99fd2d8e2b)
+        ;
+
+        
+    
+    
+            var marker_2c9253cdcc5042319b2e45450fa39fc9 = L.marker(
+                [23.430309948536426, 113.18464287826252],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_8efcc58b4c5447d6ba6edb00d70eedaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2c9253cdcc5042319b2e45450fa39fc9.setIcon(icon_8efcc58b4c5447d6ba6edb00d70eedaf);
+        
+    
+        var popup_8e93603416c94088a5b89366d178d0af = L.popup({"maxWidth": 2650});
+
+        
+            var html_f27195801a1544e2a46be85c41f0c55f = $(`<div id="html_f27195801a1544e2a46be85c41f0c55f" style="width: 100.0%; height: 100.0%;"><b>雅宝新城</b><br><b>建筑面积：100.61</b><br><b>市场价：152万</b><br><b>现售价：107万</b><br><b>首付：100万</b><br><b>地址：广州市花都区花都大道中131号</b></div>`)[0];
+            popup_8e93603416c94088a5b89366d178d0af.setContent(html_f27195801a1544e2a46be85c41f0c55f);
+        
+
+        marker_2c9253cdcc5042319b2e45450fa39fc9.bindPopup(popup_8e93603416c94088a5b89366d178d0af)
+        ;
+
+        
+    
+    
+            var marker_7c60f4dd59ad4e18b180df7b306051db = L.marker(
+                [22.790273461278804, 113.53461180419347],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_264a45b2104b4eb9a7e96a47c5eae279 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7c60f4dd59ad4e18b180df7b306051db.setIcon(icon_264a45b2104b4eb9a7e96a47c5eae279);
+        
+    
+        var popup_cb90d48679f24bfd8e905b3bda66ee6c = L.popup({"maxWidth": 2650});
+
+        
+            var html_f894fbb07ea6483eac18050d6b603841 = $(`<div id="html_f894fbb07ea6483eac18050d6b603841" style="width: 100.0%; height: 100.0%;"><b>越秀滨海隽城</b><br><b>建筑面积：104.49</b><br><b>市场价：276万</b><br><b>现售价：193万</b><br><b>首付：108万</b><br><b>地址：广州市南沙区优品街3号</b></div>`)[0];
+            popup_cb90d48679f24bfd8e905b3bda66ee6c.setContent(html_f894fbb07ea6483eac18050d6b603841);
+        
+
+        marker_7c60f4dd59ad4e18b180df7b306051db.bindPopup(popup_cb90d48679f24bfd8e905b3bda66ee6c)
+        ;
+
+        
+    
+    
+            var marker_fee3952d91b24af593b81c9bdf8485ad = L.marker(
+                [22.74212023056707, 113.58242017845335],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_530adc06a4b64de59fa225dbf088ca57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fee3952d91b24af593b81c9bdf8485ad.setIcon(icon_530adc06a4b64de59fa225dbf088ca57);
+        
+    
+        var popup_8f87ab62b1174272928600e4bd82e461 = L.popup({"maxWidth": 2650});
+
+        
+            var html_86324dc085034e28a24cbc4d3fa82d76 = $(`<div id="html_86324dc085034e28a24cbc4d3fa82d76" style="width: 100.0%; height: 100.0%;"><b>南沙珠江湾</b><br><b>建筑面积：122.40</b><br><b>市场价：270万</b><br><b>现售价：192万</b><br><b>首付：55万</b><br><b>地址：广州市南沙区南沙街品海一街3号</b></div>`)[0];
+            popup_8f87ab62b1174272928600e4bd82e461.setContent(html_86324dc085034e28a24cbc4d3fa82d76);
+        
+
+        marker_fee3952d91b24af593b81c9bdf8485ad.bindPopup(popup_8f87ab62b1174272928600e4bd82e461)
+        ;
+
+        
+    
+    
+            var marker_6a03eeca8eda4217a33e436876339e57 = L.marker(
+                [23.081397659915524, 113.32860619812335],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_c3d01d5d16b34d4cb8b8aaf74a37529f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6a03eeca8eda4217a33e436876339e57.setIcon(icon_c3d01d5d16b34d4cb8b8aaf74a37529f);
+        
+    
+        var popup_e16eadae4b4a4d3ca211994cd60c8ad2 = L.popup({"maxWidth": 2650});
+
+        
+            var html_3ba742197a5d475090337591e1ac3a08 = $(`<div id="html_3ba742197a5d475090337591e1ac3a08" style="width: 100.0%; height: 100.0%;"><b>索丽苑</b><br><b>建筑面积：49.26</b><br><b>市场价：180万</b><br><b>现售价：126万</b><br><b>首付：129万</b><br><b>地址：广州市海珠区聚德南路113号</b></div>`)[0];
+            popup_e16eadae4b4a4d3ca211994cd60c8ad2.setContent(html_3ba742197a5d475090337591e1ac3a08);
+        
+
+        marker_6a03eeca8eda4217a33e436876339e57.bindPopup(popup_e16eadae4b4a4d3ca211994cd60c8ad2)
+        ;
+
+        
+    
+    
+            var marker_489c89fcefb449ceb4fac819abd95c9a = L.marker(
+                [23.092396811708426, 113.32144201666314],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_a28a03f04ecc47f886e084a7bc38490e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_489c89fcefb449ceb4fac819abd95c9a.setIcon(icon_a28a03f04ecc47f886e084a7bc38490e);
+        
+    
+        var popup_b61d04f1b4684902be99f6d94a15f437 = L.popup({"maxWidth": 2650});
+
+        
+            var html_ca444de66fff4963815fa84cba772c7b = $(`<div id="html_ca444de66fff4963815fa84cba772c7b" style="width: 100.0%; height: 100.0%;"><b>金影花园</b><br><b>建筑面积：58.82</b><br><b>市场价：200万</b><br><b>现售价：142万</b><br><b>首付：64万</b><br><b>地址：广州市海珠区艺苑南路148号</b></div>`)[0];
+            popup_b61d04f1b4684902be99f6d94a15f437.setContent(html_ca444de66fff4963815fa84cba772c7b);
+        
+
+        marker_489c89fcefb449ceb4fac819abd95c9a.bindPopup(popup_b61d04f1b4684902be99f6d94a15f437)
+        ;
+
+        
+    
+    
+            var marker_2eead48040044ff09267c358dc7bc398 = L.marker(
+                [23.110294539635266, 113.24064236187938],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_4888b113760748cb826e76817f95e8e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2eead48040044ff09267c358dc7bc398.setIcon(icon_4888b113760748cb826e76817f95e8e7);
+        
+    
+        var popup_6ff07ccf01d34f45ab73218944c1345d = L.popup({"maxWidth": 2650});
+
+        
+            var html_31a8241210934a2d93402cac547ba497 = $(`<div id="html_31a8241210934a2d93402cac547ba497" style="width: 100.0%; height: 100.0%;"><b>逸翠湾</b><br><b>建筑面积：104.92</b><br><b>市场价：562万</b><br><b>现售价：402万</b><br><b>首付：123万</b><br><b>地址：广州市荔湾区黄沙大道12号</b></div>`)[0];
+            popup_6ff07ccf01d34f45ab73218944c1345d.setContent(html_31a8241210934a2d93402cac547ba497);
+        
+
+        marker_2eead48040044ff09267c358dc7bc398.bindPopup(popup_6ff07ccf01d34f45ab73218944c1345d)
+        ;
+
+        
+    
+    
+            var marker_514d13db57cd418fa04015e4a4e57217 = L.marker(
+                [23.118575762864804, 113.22359490157541],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_81c842cc8bf14b29b9060715a82ba483 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_514d13db57cd418fa04015e4a4e57217.setIcon(icon_81c842cc8bf14b29b9060715a82ba483);
+        
+    
+        var popup_99fe663f44844430a7afe81b70162d61 = L.popup({"maxWidth": 2650});
+
+        
+            var html_f8188703f5a04aa6be36cf9e210ec8e2 = $(`<div id="html_f8188703f5a04aa6be36cf9e210ec8e2" style="width: 100.0%; height: 100.0%;"><b>柏悦湾</b><br><b>建筑面积：96.04</b><br><b>市场价：436万</b><br><b>现售价：305万</b><br><b>首付：44万</b><br><b>地址：广州市荔湾区柏瑞巷7号</b></div>`)[0];
+            popup_99fe663f44844430a7afe81b70162d61.setContent(html_f8188703f5a04aa6be36cf9e210ec8e2);
+        
+
+        marker_514d13db57cd418fa04015e4a4e57217.bindPopup(popup_99fe663f44844430a7afe81b70162d61)
+        ;
+
+        
+    
+    
+            var marker_b299d3d9711741b5a7180d7fdfc951f1 = L.marker(
+                [23.259172620449984, 113.8427716847132],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_6abdf37750d4415fa4d2280a3ee7c619 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b299d3d9711741b5a7180d7fdfc951f1.setIcon(icon_6abdf37750d4415fa4d2280a3ee7c619);
+        
+    
+        var popup_f7343fcb20864825a6964ffcdbb21836 = L.popup({"maxWidth": 2650});
+
+        
+            var html_5b708e45965f4319be85256b6b3bd3a8 = $(`<div id="html_5b708e45965f4319be85256b6b3bd3a8" style="width: 100.0%; height: 100.0%;"><b>敏建锦绣星辰</b><br><b>建筑面积：123.35</b><br><b>市场价：218万</b><br><b>现售价：152万</b><br><b>首付：76万</b><br><b>地址：广州市增城区增江街星辰五街1号</b></div>`)[0];
+            popup_f7343fcb20864825a6964ffcdbb21836.setContent(html_5b708e45965f4319be85256b6b3bd3a8);
+        
+
+        marker_b299d3d9711741b5a7180d7fdfc951f1.bindPopup(popup_f7343fcb20864825a6964ffcdbb21836)
+        ;
+
+        
+    
+    
+            var marker_2d61dc810da14756ade461ef795311e4 = L.marker(
+                [23.12679933630569, 113.5782681504163],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_63847006c2834a4d88e80425bbb7210e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2d61dc810da14756ade461ef795311e4.setIcon(icon_63847006c2834a4d88e80425bbb7210e);
+        
+    
+        var popup_d2f374bf520445049d024ac8d8e486c7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_9a0c0366bcb640e19504a084b7b306f0 = $(`<div id="html_9a0c0366bcb640e19504a084b7b306f0" style="width: 100.0%; height: 100.0%;"><b>碧桂园凤凰城</b><br><b>建筑面积：94.11</b><br><b>市场价：202万</b><br><b>现售价：142万</b><br><b>首付：67万</b><br><b>地址：广州市增城市新塘镇凤夏城凤妍苑四街6号</b></div>`)[0];
+            popup_d2f374bf520445049d024ac8d8e486c7.setContent(html_9a0c0366bcb640e19504a084b7b306f0);
+        
+
+        marker_2d61dc810da14756ade461ef795311e4.bindPopup(popup_d2f374bf520445049d024ac8d8e486c7)
+        ;
+
+        
+    
+    
+            var marker_6fe4c76a331c400f96436144c8e516b3 = L.marker(
+                [23.2733284680887, 113.67968586994415],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_12bf53de9e724f65b361f492855ba019 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6fe4c76a331c400f96436144c8e516b3.setIcon(icon_12bf53de9e724f65b361f492855ba019);
+        
+    
+        var popup_7deae2d63a3141389cd8f5b7d95b14b7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_a29593903cd84a14877480339124e2d7 = $(`<div id="html_a29593903cd84a14877480339124e2d7" style="width: 100.0%; height: 100.0%;"><b>碧桂园城市花园</b><br><b>建筑面积：98.38</b><br><b>市场价：176万</b><br><b>现售价：127万</b><br><b>首付：50万</b><br><b>地址：广州市增城区朱村街碧桂园城市花园花岸苑二街1号</b></div>`)[0];
+            popup_7deae2d63a3141389cd8f5b7d95b14b7.setContent(html_a29593903cd84a14877480339124e2d7);
+        
+
+        marker_6fe4c76a331c400f96436144c8e516b3.bindPopup(popup_7deae2d63a3141389cd8f5b7d95b14b7)
+        ;
+
+        
+    
+    
+            var marker_7a42b458115c43d4aade8c1ab2f6bcbe = L.marker(
+                [23.108862473599736, 113.63166076382683],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_db6f7f4465e446c49bd5b0d77acd6d79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7a42b458115c43d4aade8c1ab2f6bcbe.setIcon(icon_db6f7f4465e446c49bd5b0d77acd6d79);
+        
+    
+        var popup_718ddf54445d499bb8715bb6c25210d4 = L.popup({"maxWidth": 2650});
+
+        
+            var html_b6a2e3c7e77b43f7b5ed86db248a7950 = $(`<div id="html_b6a2e3c7e77b43f7b5ed86db248a7950" style="width: 100.0%; height: 100.0%;"><b>保利东江首府</b><br><b>建筑面积：130.86</b><br><b>市场价：280万</b><br><b>现售价：196万</b><br><b>首付：84万</b><br><b>地址：广州市增城区新塘镇保利东江管府环府东路2号</b></div>`)[0];
+            popup_718ddf54445d499bb8715bb6c25210d4.setContent(html_b6a2e3c7e77b43f7b5ed86db248a7950);
+        
+
+        marker_7a42b458115c43d4aade8c1ab2f6bcbe.bindPopup(popup_718ddf54445d499bb8715bb6c25210d4)
+        ;
+
+        
+    
+    
+            var marker_ab7f8cdca14f42439649e1f9d1fca75a = L.marker(
+                [23.12679933630569, 113.5782681504163],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_5fcb2065f0db45eb93f02e3cc73558c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ab7f8cdca14f42439649e1f9d1fca75a.setIcon(icon_5fcb2065f0db45eb93f02e3cc73558c2);
+        
+    
+        var popup_cb3351506fa74bd48d3e446eadf04cea = L.popup({"maxWidth": 2650});
+
+        
+            var html_806d7c9db8464892bbe94a63d754f685 = $(`<div id="html_806d7c9db8464892bbe94a63d754f685" style="width: 100.0%; height: 100.0%;"><b>碧桂园凤屋域</b><br><b>建筑面积：183.92</b><br><b>市场价：349万</b><br><b>现售价：245万</b><br><b>首付：180万</b><br><b>地址：广州市增城区新塘镇广园东碧桂园凤厚城凤盈苑十街2座</b></div>`)[0];
+            popup_cb3351506fa74bd48d3e446eadf04cea.setContent(html_806d7c9db8464892bbe94a63d754f685);
+        
+
+        marker_ab7f8cdca14f42439649e1f9d1fca75a.bindPopup(popup_cb3351506fa74bd48d3e446eadf04cea)
+        ;
+
+        
+    
+    
+            var marker_2ed56e9b3ba54a3f93eb7f1ea8725789 = L.marker(
+                [23.189773793738844, 113.59470564119502],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_5ac04a144d89473e875a443d4535ebe0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2ed56e9b3ba54a3f93eb7f1ea8725789.setIcon(icon_5ac04a144d89473e875a443d4535ebe0);
+        
+    
+        var popup_312090d3db7941cc85a35e674a6c54d5 = L.popup({"maxWidth": 2650});
+
+        
+            var html_0d0a3739eec54f5bad149332a4c86e2e = $(`<div id="html_0d0a3739eec54f5bad149332a4c86e2e" style="width: 100.0%; height: 100.0%;"><b>誉山国际</b><br><b>建筑面积：89.11</b><br><b>市场价：161万</b><br><b>现售价：113万</b><br><b>首付：40万</b><br><b>地址：广州市增城区新塘镇永和誉山国际悦山六街1号</b></div>`)[0];
+            popup_312090d3db7941cc85a35e674a6c54d5.setContent(html_0d0a3739eec54f5bad149332a4c86e2e);
+        
+
+        marker_2ed56e9b3ba54a3f93eb7f1ea8725789.bindPopup(popup_312090d3db7941cc85a35e674a6c54d5)
+        ;
+
+        
+    
+    
+            var marker_23d14e3421024d0eb0a3fae5806397f0 = L.marker(
+                [23.189773793738844, 113.59470564119502],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_186e444898bb4afb8f56afc00915bd96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_23d14e3421024d0eb0a3fae5806397f0.setIcon(icon_186e444898bb4afb8f56afc00915bd96);
+        
+    
+        var popup_69b62de8bcec48ceab8aa0c3ebf7b46a = L.popup({"maxWidth": 2650});
+
+        
+            var html_9661bb5f6cfc4b40853a871c028f823e = $(`<div id="html_9661bb5f6cfc4b40853a871c028f823e" style="width: 100.0%; height: 100.0%;"><b>誉山国际</b><br><b>建筑面积：67.75</b><br><b>市场价：116万</b><br><b>现售价：82万</b><br><b>首付：29万</b><br><b>地址：广州市增城区永宁街怡翠街1号</b></div>`)[0];
+            popup_69b62de8bcec48ceab8aa0c3ebf7b46a.setContent(html_9661bb5f6cfc4b40853a871c028f823e);
+        
+
+        marker_23d14e3421024d0eb0a3fae5806397f0.bindPopup(popup_69b62de8bcec48ceab8aa0c3ebf7b46a)
+        ;
+
+        
+    
+    
+            var marker_17277a974b6f47ec988a688bf3eb7210 = L.marker(
+                [23.094080761481056, 113.19117072249486],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_719507348eba40f98e11adc16a5d7a87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_17277a974b6f47ec988a688bf3eb7210.setIcon(icon_719507348eba40f98e11adc16a5d7a87);
+        
+    
+        var popup_b05296b9c91f43d493f9003f3270c33d = L.popup({"maxWidth": 2650});
+
+        
+            var html_4b40cb3529c04fcc83b6cffe742ccc85 = $(`<div id="html_4b40cb3529c04fcc83b6cffe742ccc85" style="width: 100.0%; height: 100.0%;"><b>金地悦荔</b><br><b>建筑面积：77.27</b><br><b>市场价：175万</b><br><b>现售价：127万</b><br><b>首付：55万</b><br><b>地址：佛山市南海区大沥镇盐步河东中心路悦荔花园14座</b></div>`)[0];
+            popup_b05296b9c91f43d493f9003f3270c33d.setContent(html_4b40cb3529c04fcc83b6cffe742ccc85);
+        
+
+        marker_17277a974b6f47ec988a688bf3eb7210.bindPopup(popup_b05296b9c91f43d493f9003f3270c33d)
+        ;
+
+        
+    
+    
+            var marker_0e4ee015f6fa40ef9b924b288ae8d142 = L.marker(
+                [23.119476285024344, 113.18900040548087],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_754cd82076714b69ab5b5467563310c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e4ee015f6fa40ef9b924b288ae8d142.setIcon(icon_754cd82076714b69ab5b5467563310c6);
+        
+    
+        var popup_ad44411e4ab148788f3aa517ece0c6d0 = L.popup({"maxWidth": 2650});
+
+        
+            var html_39f4ef1a48a24aa7a3cbdee365e2f232 = $(`<div id="html_39f4ef1a48a24aa7a3cbdee365e2f232" style="width: 100.0%; height: 100.0%;"><b>瑞丽花园</b><br><b>建筑面积：149.18</b><br><b>市场价：220万</b><br><b>现售价：154万</b><br><b>首付：38万</b><br><b>地址：佛山市南海区大沥镇黄岐北环东路瑞丽花园荟雅图IJKL座J栋J-803房</b></div>`)[0];
+            popup_ad44411e4ab148788f3aa517ece0c6d0.setContent(html_39f4ef1a48a24aa7a3cbdee365e2f232);
+        
+
+        marker_0e4ee015f6fa40ef9b924b288ae8d142.bindPopup(popup_ad44411e4ab148788f3aa517ece0c6d0)
+        ;
+
+        
+    
+    
+            var marker_ce4b4c09a553454f9f373959ce2572b7 = L.marker(
+                [23.035002660271477, 113.25342828766809],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_96784b29f92342d8a54d4ab4fa7af3a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ce4b4c09a553454f9f373959ce2572b7.setIcon(icon_96784b29f92342d8a54d4ab4fa7af3a3);
+        
+    
+        var popup_46ad1a8474744ffba767242d74c6a87a = L.popup({"maxWidth": 2650});
+
+        
+            var html_571c2a576048484d9d21cefecbc881e6 = $(`<div id="html_571c2a576048484d9d21cefecbc881e6" style="width: 100.0%; height: 100.0%;"><b>中海万锦熙岸花园</b><br><b>建筑面积：88.71</b><br><b>市场价：191万</b><br><b>现售价：137万</b><br><b>首付：109万</b><br><b>地址：佛山市南海区桂城街道环岛东路1号</b></div>`)[0];
+            popup_46ad1a8474744ffba767242d74c6a87a.setContent(html_571c2a576048484d9d21cefecbc881e6);
+        
+
+        marker_ce4b4c09a553454f9f373959ce2572b7.bindPopup(popup_46ad1a8474744ffba767242d74c6a87a)
+        ;
+
+        
+    
+    
+            var marker_7586ecb191d24a76ac1450395d989718 = L.marker(
+                [23.112706717207704, 113.20412009609431],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_07a7e71661eb4421b11f7723a6839fd2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7586ecb191d24a76ac1450395d989718.setIcon(icon_07a7e71661eb4421b11f7723a6839fd2);
+        
+    
+        var popup_cd94e8a03db04e4e9453e5e417329616 = L.popup({"maxWidth": 2650});
+
+        
+            var html_c7558dbe8a124da5a9964e96981218d4 = $(`<div id="html_c7558dbe8a124da5a9964e96981218d4" style="width: 100.0%; height: 100.0%;"><b>瑞安花园</b><br><b>建筑面积：80.76</b><br><b>市场价：170万</b><br><b>现售价：119万</b><br><b>首付：100万</b><br><b>地址：佛山市南海区大沥镇黄岐广佛路南侧瑞安花园1座</b></div>`)[0];
+            popup_cd94e8a03db04e4e9453e5e417329616.setContent(html_c7558dbe8a124da5a9964e96981218d4);
+        
+
+        marker_7586ecb191d24a76ac1450395d989718.bindPopup(popup_cd94e8a03db04e4e9453e5e417329616)
+        ;
+
+        
+    
+    
+            var marker_1d466787cc224928a37c4d6d851b587f = L.marker(
+                [23.050355382321598, 113.13817139366776],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_00c7c24117f0439d8aacaae3fc3737b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1d466787cc224928a37c4d6d851b587f.setIcon(icon_00c7c24117f0439d8aacaae3fc3737b7);
+        
+    
+        var popup_d9fbd7b799be469a866d4da7b24e82b8 = L.popup({"maxWidth": 2650});
+
+        
+            var html_a2c573290d784faeb564084cfa8e1907 = $(`<div id="html_a2c573290d784faeb564084cfa8e1907" style="width: 100.0%; height: 100.0%;"><b>丽雅苑</b><br><b>建筑面积：169.58.</b><br><b>市场价：322万</b><br><b>现售价：227万</b><br><b>首付：160万</b><br><b>地址：佛山市南海区桂城南海大道北33号</b></div>`)[0];
+            popup_d9fbd7b799be469a866d4da7b24e82b8.setContent(html_a2c573290d784faeb564084cfa8e1907);
+        
+
+        marker_1d466787cc224928a37c4d6d851b587f.bindPopup(popup_d9fbd7b799be469a866d4da7b24e82b8)
+        ;
+
+        
+    
+    
+            var marker_0b882f1cec004f809af12ba0a502a2c5 = L.marker(
+                [23.004688181199917, 113.06369439062371],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_65bb6ebf398743a5bb5dad61266cc1af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0b882f1cec004f809af12ba0a502a2c5.setIcon(icon_65bb6ebf398743a5bb5dad61266cc1af);
+        
+    
+        var popup_fd599b0e0b55453195c2c605f7c2eb8d = L.popup({"maxWidth": 2650});
+
+        
+            var html_c83b5f5c53884e10b1495e0fce62b279 = $(`<div id="html_c83b5f5c53884e10b1495e0fce62b279" style="width: 100.0%; height: 100.0%;"><b>中海凤凰熙岸</b><br><b>建筑面积：144.41</b><br><b>市场价：260万</b><br><b>现售价：187万</b><br><b>首付：37万</b><br><b>地址：佛山市禅城区华宝南路23号</b></div>`)[0];
+            popup_fd599b0e0b55453195c2c605f7c2eb8d.setContent(html_c83b5f5c53884e10b1495e0fce62b279);
+        
+
+        marker_0b882f1cec004f809af12ba0a502a2c5.bindPopup(popup_fd599b0e0b55453195c2c605f7c2eb8d)
+        ;
+
+        
+    
+    
+            var marker_c0ba3d8f40bb42398ada83a0ece25ca6 = L.marker(
+                [22.98151268948819, 113.0324784460009],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_a987fe18aaa445da8d40069ac2d75a54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c0ba3d8f40bb42398ada83a0ece25ca6.setIcon(icon_a987fe18aaa445da8d40069ac2d75a54);
+        
+    
+        var popup_7a7c632fa2de4207914124b7fcdcd1e6 = L.popup({"maxWidth": 2650});
+
+        
+            var html_ebf4953ff7ab41e79b71036648921d6f = $(`<div id="html_ebf4953ff7ab41e79b71036648921d6f" style="width: 100.0%; height: 100.0%;"><b>龙光水悦龙湾</b><br><b>建筑面积：96.44</b><br><b>市场价：136万</b><br><b>现售价：97万</b><br><b>首付：41万</b><br><b>地址：佛山市禅城区南庄犬道中98号</b></div>`)[0];
+            popup_7a7c632fa2de4207914124b7fcdcd1e6.setContent(html_ebf4953ff7ab41e79b71036648921d6f);
+        
+
+        marker_c0ba3d8f40bb42398ada83a0ece25ca6.bindPopup(popup_7a7c632fa2de4207914124b7fcdcd1e6)
+        ;
+
+        
+    
+    
+            var marker_a300d4a381934cf9a5802a5a6d6f8d43 = L.marker(
+                [22.970716979995487, 113.0007708158126],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_7a2133ccaf4a43688148ba7cc19ffd59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a300d4a381934cf9a5802a5a6d6f8d43.setIcon(icon_7a2133ccaf4a43688148ba7cc19ffd59);
+        
+    
+        var popup_326c192be9da4677a2e3388f4db07684 = L.popup({"maxWidth": 2650});
+
+        
+            var html_6b4c836196ec4f71924428493b47696a = $(`<div id="html_6b4c836196ec4f71924428493b47696a" style="width: 100.0%; height: 100.0%;"><b>佛山万科城</b><br><b>建筑面积：88.39</b><br><b>市场价：127万</b><br><b>现售价：89万</b><br><b>首付：60万</b><br><b>地址：佛山市禅城区沿江路55号</b></div>`)[0];
+            popup_326c192be9da4677a2e3388f4db07684.setContent(html_6b4c836196ec4f71924428493b47696a);
+        
+
+        marker_a300d4a381934cf9a5802a5a6d6f8d43.bindPopup(popup_326c192be9da4677a2e3388f4db07684)
+        ;
+
+        
+    
+    
+            var marker_6f6acba7b1ba447c83be65be6574cab2 = L.marker(
+                [22.902810075999398, 113.21124486337321],
+                {"opacity": 0.8}
+            ).addTo(map_9b51fe5445be467eaae446e3ed4bdb7b);
+        
+    
+            var icon_cc17b64205614ba8832f105aaf32440d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6f6acba7b1ba447c83be65be6574cab2.setIcon(icon_cc17b64205614ba8832f105aaf32440d);
+        
+    
+        var popup_373983f411bd4c99b47c5d54ec2f83e7 = L.popup({"maxWidth": 2650});
+
+        
+            var html_6dbe068d1fc849b8831dc0b52f721cbd = $(`<div id="html_6dbe068d1fc849b8831dc0b52f721cbd" style="width: 100.0%; height: 100.0%;"><b>美的海岸花园</b><br><b>建筑面积：103.20</b><br><b>市场价：133万</b><br><b>现售价：94万</b><br><b>首付：80万</b><br><b>地址：佛山市顺德区北浩镇三洪奇居委会美的海岸花园海晴居四栋一单元201房</b></div>`)[0];
+            popup_373983f411bd4c99b47c5d54ec2f83e7.setContent(html_6dbe068d1fc849b8831dc0b52f721cbd);
+        
+
+        marker_6f6acba7b1ba447c83be65be6574cab2.bindPopup(popup_373983f411bd4c99b47c5d54ec2f83e7)
+        ;
+
+        
+    
+</script>
